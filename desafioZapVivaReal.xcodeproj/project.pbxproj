@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86CB20290C4B00CC3699 /* AppDelegate.swift */; };
-		04CC86CE20290C4B00CC3699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86CD20290C4B00CC3699 /* ViewController.swift */; };
 		04CC86D120290C4B00CC3699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86CF20290C4B00CC3699 /* Main.storyboard */; };
 		04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86D220290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld */; };
 		04CC86D620290C4B00CC3699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86D520290C4B00CC3699 /* Assets.xcassets */; };
 		04CC86D920290C4B00CC3699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86D720290C4B00CC3699 /* LaunchScreen.storyboard */; };
 		04CC86E420290C4B00CC3699 /* desafioZapVivaRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86E320290C4B00CC3699 /* desafioZapVivaRealTests.swift */; };
+		04CC86F2202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */; };
+		04CC86F3202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */; };
+		04CC86F5202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */; };
+		04CC86F6202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */; };
+		04CC86F8202A7AF400CC3699 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */; };
+		04CC86F9202A7AF400CC3699 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */; };
+		04CC86FC202A7B0600CC3699 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FB202A7B0600CC3699 /* Game.swift */; };
+		04CC86FD202A7B0600CC3699 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FB202A7B0600CC3699 /* Game.swift */; };
+		04CC8700202A929600CC3699 /* TopGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FF202A929600CC3699 /* TopGameManager.swift */; };
+		04CC8701202A929600CC3699 /* TopGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FF202A929600CC3699 /* TopGameManager.swift */; };
+		04CC870D202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */; };
+		04CC870E202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */; };
+		04CC8710202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
+		04CC8711202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +42,6 @@
 /* Begin PBXFileReference section */
 		04CC86C820290C4B00CC3699 /* desafioZapVivaReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioZapVivaReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC86CB20290C4B00CC3699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04CC86CD20290C4B00CC3699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CC86D020290C4B00CC3699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04CC86D320290C4B00CC3699 /* desafioZapVivaReal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = desafioZapVivaReal.xcdatamodel; sourceTree = "<group>"; };
 		04CC86D520290C4B00CC3699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +50,13 @@
 		04CC86DF20290C4B00CC3699 /* desafioZapVivaRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioZapVivaRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC86E320290C4B00CC3699 /* desafioZapVivaRealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioZapVivaRealTests.swift; sourceTree = "<group>"; };
 		04CC86E520290C4B00CC3699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewController.swift; sourceTree = "<group>"; };
+		04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGameViewController.swift; sourceTree = "<group>"; };
+		04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		04CC86FB202A7B0600CC3699 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		04CC86FF202A929600CC3699 /* TopGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGameManager.swift; sourceTree = "<group>"; };
+		04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +98,11 @@
 		04CC86CA20290C4B00CC3699 /* desafioZapVivaReal */ = {
 			isa = PBXGroup;
 			children = (
-				04CC86CB20290C4B00CC3699 /* AppDelegate.swift */,
-				04CC86CD20290C4B00CC3699 /* ViewController.swift */,
-				04CC86CF20290C4B00CC3699 /* Main.storyboard */,
-				04CC86D520290C4B00CC3699 /* Assets.xcassets */,
-				04CC86D720290C4B00CC3699 /* LaunchScreen.storyboard */,
-				04CC86DA20290C4B00CC3699 /* Info.plist */,
-				04CC86D220290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld */,
+				04CC86EE202A790300CC3699 /* TopGames */,
+				04CC86F0202A793F00CC3699 /* GamesDetail */,
+				04CC86EF202A792100CC3699 /* FavoriteGames */,
+				04CC86FA202A7AF900CC3699 /* Model */,
+				04CC870B202A936600CC3699 /* App */,
 			);
 			path = desafioZapVivaReal;
 			sourceTree = "<group>";
@@ -97,6 +114,126 @@
 				04CC86E520290C4B00CC3699 /* Info.plist */,
 			);
 			path = desafioZapVivaRealTests;
+			sourceTree = "<group>";
+		};
+		04CC86EE202A790300CC3699 /* TopGames */ = {
+			isa = PBXGroup;
+			children = (
+				04CC8704202A92E300CC3699 /* UI */,
+				04CC8703202A92C500CC3699 /* Manager */,
+				04CC8702202A92AC00CC3699 /* ViewController */,
+			);
+			path = TopGames;
+			sourceTree = "<group>";
+		};
+		04CC86EF202A792100CC3699 /* FavoriteGames */ = {
+			isa = PBXGroup;
+			children = (
+				04CC8707202A931600CC3699 /* ViewController */,
+				04CC8706202A930E00CC3699 /* Manager */,
+				04CC8705202A930500CC3699 /* UI */,
+			);
+			path = FavoriteGames;
+			sourceTree = "<group>";
+		};
+		04CC86F0202A793F00CC3699 /* GamesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				04CC870A202A934F00CC3699 /* ViewController */,
+				04CC8709202A933D00CC3699 /* Manager */,
+				04CC8708202A933500CC3699 /* UI */,
+			);
+			path = GamesDetail;
+			sourceTree = "<group>";
+		};
+		04CC86FA202A7AF900CC3699 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86FB202A7B0600CC3699 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CC8702202A92AC00CC3699 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04CC8703202A92C500CC3699 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86FF202A929600CC3699 /* TopGameManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04CC8704202A92E300CC3699 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04CC8705202A930500CC3699 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04CC8706202A930E00CC3699 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04CC8707202A931600CC3699 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04CC8708202A933500CC3699 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04CC8709202A933D00CC3699 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04CC870A202A934F00CC3699 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04CC870B202A936600CC3699 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				04CC86CB20290C4B00CC3699 /* AppDelegate.swift */,
+				04CC86CF20290C4B00CC3699 /* Main.storyboard */,
+				04CC86D520290C4B00CC3699 /* Assets.xcassets */,
+				04CC86D720290C4B00CC3699 /* LaunchScreen.storyboard */,
+				04CC86D220290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld */,
+				04CC86DA20290C4B00CC3699 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +286,7 @@
 				TargetAttributes = {
 					04CC86C720290C4B00CC3699 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					04CC86DE20290C4B00CC3699 = {
 						CreatedOnToolsVersion = 9.1;
@@ -202,7 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CC86CE20290C4B00CC3699 /* ViewController.swift in Sources */,
+				04CC8700202A929600CC3699 /* TopGameManager.swift in Sources */,
+				04CC86F5202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */,
+				04CC8710202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */,
+				04CC86FC202A7B0600CC3699 /* Game.swift in Sources */,
+				04CC86F8202A7AF400CC3699 /* GameDetailViewController.swift in Sources */,
+				04CC870D202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */,
+				04CC86F2202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */,
 				04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */,
 				04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */,
 			);
@@ -212,6 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CC86F3202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */,
+				04CC86FD202A7B0600CC3699 /* Game.swift in Sources */,
+				04CC8701202A929600CC3699 /* TopGameManager.swift in Sources */,
+				04CC86F9202A7AF400CC3699 /* GameDetailViewController.swift in Sources */,
+				04CC8711202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */,
+				04CC86F6202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */,
+				04CC870E202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */,
 				04CC86E420290C4B00CC3699 /* desafioZapVivaRealTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -357,12 +507,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X98UFEMP6;
-				INFOPLIST_FILE = desafioZapVivaReal/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,12 +524,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X98UFEMP6;
-				INFOPLIST_FILE = desafioZapVivaReal/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
