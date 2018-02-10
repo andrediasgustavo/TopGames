@@ -7,17 +7,22 @@
 //
 
 import Foundation
+import ObjectMapper
 
-final class Game {
+final class Game: Mappable {
     
-    let name: String
-    let banner: String
-    let visualizations: Int
+    var name: String?
+    var banner: String?
+    var visualizations: Int?
     
-    init(name: String, banner: String, visualizations: Int) {
-        self.name = name
-        self.banner = banner
-        self.visualizations = visualizations
+    required init?(map: Map) {
     }
+    
+    func mapping(map: Map) {
+        name           <- map["name"]
+        banner         <- map["medium"]
+        visualizations <- map["viewers"]
+    }
+    
 
 }

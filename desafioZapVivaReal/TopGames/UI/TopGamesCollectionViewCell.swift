@@ -15,13 +15,11 @@ class TopGamesCollectionViewCell: UICollectionViewCell {
     
     func setup(game: Game) {
         self.gameName.text = game.name
-        self.gameImage.image = UIImage(named: game.banner)
+        self.gameImage.image = UIImage(named: game.banner!)
     }
 
-    
-    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
     

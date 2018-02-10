@@ -13,7 +13,7 @@
         <!--Top Games-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TopGamesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopGamesViewController" id="BYZ-38-t0r" customClass="TopGamesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Game Detail View Controller-->
         <scene sceneID="rFa-Oc-zzB">
             <objects>
-                <viewController id="6W6-Sb-36t" customClass="GameDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailViewController" id="6W6-Sb-36t" customClass="GameDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQR-ew-ho6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fYx-AU-5KO"/>
                     </view>
+                    <connections>
+                        <outlet property="gameImage" destination="OMr-H8-goi" id="BKo-fE-Uxg"/>
+                        <outlet property="gameName" destination="pao-KU-let" id="cup-dh-T4c"/>
+                        <outlet property="gameVisualization" destination="lUO-zt-rna" id="W4S-au-NGN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXb-C9-7DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +192,7 @@
         <!--Favoritos-->
         <scene sceneID="sFA-TW-zLC">
             <objects>
-                <viewController id="1bW-Yc-ME6" customClass="FavoriteGamesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteGamesViewController" id="1bW-Yc-ME6" customClass="FavoriteGamesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAb-dn-7Ci">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

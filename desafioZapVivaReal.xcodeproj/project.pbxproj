@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044583B8202F6B99001ED081 /* TopGamesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044583B7202F6B99001ED081 /* TopGamesSpec.swift */; };
 		04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86CB20290C4B00CC3699 /* AppDelegate.swift */; };
 		04CC86D120290C4B00CC3699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86CF20290C4B00CC3699 /* Main.storyboard */; };
 		04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86D220290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld */; };
 		04CC86D620290C4B00CC3699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86D520290C4B00CC3699 /* Assets.xcassets */; };
 		04CC86D920290C4B00CC3699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86D720290C4B00CC3699 /* LaunchScreen.storyboard */; };
-		04CC86E420290C4B00CC3699 /* desafioZapVivaRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86E320290C4B00CC3699 /* desafioZapVivaRealTests.swift */; };
 		04CC86F2202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */; };
 		04CC86F3202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */; };
 		04CC86F5202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */; };
@@ -20,13 +20,18 @@
 		04CC86F8202A7AF400CC3699 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */; };
 		04CC86F9202A7AF400CC3699 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */; };
 		04CC86FC202A7B0600CC3699 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FB202A7B0600CC3699 /* Game.swift */; };
-		04CC86FD202A7B0600CC3699 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FB202A7B0600CC3699 /* Game.swift */; };
-		04CC8700202A929600CC3699 /* TopGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FF202A929600CC3699 /* TopGameManager.swift */; };
-		04CC8701202A929600CC3699 /* TopGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86FF202A929600CC3699 /* TopGameManager.swift */; };
 		04CC870D202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */; };
 		04CC870E202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */; };
 		04CC8710202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
 		04CC8711202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
+		04D635AB202F727B008CD103 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635AA202F727B008CD103 /* AppManager.swift */; };
+		04D635AD202F729B008CD103 /* GamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635AC202F729B008CD103 /* GamesManager.swift */; };
+		04D635B4202F83C0008CD103 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B3202F83C0008CD103 /* HTTPService.swift */; };
+		04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B5202F8449008CD103 /* BaseAPI.swift */; };
+		04D635B8202F915C008CD103 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B7202F915C008CD103 /* APIRequest.swift */; };
+		04D635BB202F9D76008CD103 /* TopGamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635BA202F9D76008CD103 /* TopGamesManager.swift */; };
+		0985D376A8CEDEE08BE398E5 /* Pods_desafioZapVivaReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F3D8C086ED6B7AB65F7EC /* Pods_desafioZapVivaReal.framework */; };
+		347818367B278D69BED44548 /* Pods_desafioZapVivaRealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA86BC3AB64B1B57FC58231C /* Pods_desafioZapVivaRealTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044583B7202F6B99001ED081 /* TopGamesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesSpec.swift; sourceTree = "<group>"; };
 		04CC86C820290C4B00CC3699 /* desafioZapVivaReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioZapVivaReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC86CB20290C4B00CC3699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CC86D020290C4B00CC3699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,15 +54,25 @@
 		04CC86D820290C4B00CC3699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CC86DA20290C4B00CC3699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CC86DF20290C4B00CC3699 /* desafioZapVivaRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioZapVivaRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04CC86E320290C4B00CC3699 /* desafioZapVivaRealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioZapVivaRealTests.swift; sourceTree = "<group>"; };
 		04CC86E520290C4B00CC3699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CC86F1202A7A7F00CC3699 /* TopGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewController.swift; sourceTree = "<group>"; };
 		04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGameViewController.swift; sourceTree = "<group>"; };
 		04CC86F7202A7AF400CC3699 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		04CC86FB202A7B0600CC3699 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		04CC86FF202A929600CC3699 /* TopGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGameManager.swift; sourceTree = "<group>"; };
 		04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D635AA202F727B008CD103 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		04D635AC202F729B008CD103 /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
+		04D635B3202F83C0008CD103 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		04D635B5202F8449008CD103 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		04D635B7202F915C008CD103 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		04D635BA202F9D76008CD103 /* TopGamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesManager.swift; sourceTree = "<group>"; };
+		0A984B94E3C8EFBD95EB727F /* Pods-desafioZapVivaReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaReal.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal.release.xcconfig"; sourceTree = "<group>"; };
+		880F3D8C086ED6B7AB65F7EC /* Pods_desafioZapVivaReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioZapVivaReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9CC7D0814C5FC18169AD9D5 /* Pods-desafioZapVivaReal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaReal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal.debug.xcconfig"; sourceTree = "<group>"; };
+		AA86BC3AB64B1B57FC58231C /* Pods_desafioZapVivaRealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioZapVivaRealTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D91177BEAB1881CA90EB7C /* Pods-desafioZapVivaRealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaRealTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaRealTests/Pods-desafioZapVivaRealTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F736453E6F71F36C1DD5D373 /* Pods-desafioZapVivaRealTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaRealTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaRealTests/Pods-desafioZapVivaRealTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0985D376A8CEDEE08BE398E5 /* Pods_desafioZapVivaReal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347818367B278D69BED44548 /* Pods_desafioZapVivaRealTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,8 @@
 				04CC86CA20290C4B00CC3699 /* desafioZapVivaReal */,
 				04CC86E220290C4B00CC3699 /* desafioZapVivaRealTests */,
 				04CC86C920290C4B00CC3699 /* Products */,
+				B54FE047A2A85BE80C7AE2D4 /* Pods */,
+				5C2B696F38BCECEB61C435A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +122,8 @@
 				04CC86F0202A793F00CC3699 /* GamesDetail */,
 				04CC86EF202A792100CC3699 /* FavoriteGames */,
 				04CC86FA202A7AF900CC3699 /* Model */,
+				04D635A9202F7261008CD103 /* Manager */,
+				04D635AE202F7936008CD103 /* WebService */,
 				04CC870B202A936600CC3699 /* App */,
 			);
 			path = desafioZapVivaReal;
@@ -110,7 +132,7 @@
 		04CC86E220290C4B00CC3699 /* desafioZapVivaRealTests */ = {
 			isa = PBXGroup;
 			children = (
-				04CC86E320290C4B00CC3699 /* desafioZapVivaRealTests.swift */,
+				044583B7202F6B99001ED081 /* TopGamesSpec.swift */,
 				04CC86E520290C4B00CC3699 /* Info.plist */,
 			);
 			path = desafioZapVivaRealTests;
@@ -119,8 +141,8 @@
 		04CC86EE202A790300CC3699 /* TopGames */ = {
 			isa = PBXGroup;
 			children = (
+				04D635B9202F9D59008CD103 /* Manager */,
 				04CC8704202A92E300CC3699 /* UI */,
-				04CC8703202A92C500CC3699 /* Manager */,
 				04CC8702202A92AC00CC3699 /* ViewController */,
 			);
 			path = TopGames;
@@ -130,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				04CC8707202A931600CC3699 /* ViewController */,
-				04CC8706202A930E00CC3699 /* Manager */,
 				04CC8705202A930500CC3699 /* UI */,
 			);
 			path = FavoriteGames;
@@ -140,8 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				04CC870A202A934F00CC3699 /* ViewController */,
-				04CC8709202A933D00CC3699 /* Manager */,
-				04CC8708202A933500CC3699 /* UI */,
 			);
 			path = GamesDetail;
 			sourceTree = "<group>";
@@ -162,14 +181,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		04CC8703202A92C500CC3699 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				04CC86FF202A929600CC3699 /* TopGameManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		04CC8704202A92E300CC3699 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,33 +197,12 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		04CC8706202A930E00CC3699 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		04CC8707202A931600CC3699 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				04CC86F4202A7AD100CC3699 /* FavoriteGameViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		04CC8708202A933500CC3699 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		04CC8709202A933D00CC3699 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		04CC870A202A934F00CC3699 /* ViewController */ = {
@@ -236,6 +226,54 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		04D635A9202F7261008CD103 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04D635AA202F727B008CD103 /* AppManager.swift */,
+				04D635AC202F729B008CD103 /* GamesManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04D635AE202F7936008CD103 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				04D635B3202F83C0008CD103 /* HTTPService.swift */,
+				04D635B5202F8449008CD103 /* BaseAPI.swift */,
+				04D635B7202F915C008CD103 /* APIRequest.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		04D635B9202F9D59008CD103 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04D635BA202F9D76008CD103 /* TopGamesManager.swift */,
+			);
+			name = Manager;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5C2B696F38BCECEB61C435A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880F3D8C086ED6B7AB65F7EC /* Pods_desafioZapVivaReal.framework */,
+				AA86BC3AB64B1B57FC58231C /* Pods_desafioZapVivaRealTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B54FE047A2A85BE80C7AE2D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC7D0814C5FC18169AD9D5 /* Pods-desafioZapVivaReal.debug.xcconfig */,
+				0A984B94E3C8EFBD95EB727F /* Pods-desafioZapVivaReal.release.xcconfig */,
+				C7D91177BEAB1881CA90EB7C /* Pods-desafioZapVivaRealTests.debug.xcconfig */,
+				F736453E6F71F36C1DD5D373 /* Pods-desafioZapVivaRealTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CC86E820290C4B00CC3699 /* Build configuration list for PBXNativeTarget "desafioZapVivaReal" */;
 			buildPhases = (
+				06963DD9F9E5C40AA2CF0D5E /* [CP] Check Pods Manifest.lock */,
 				04CC86C420290C4B00CC3699 /* Sources */,
 				04CC86C520290C4B00CC3699 /* Frameworks */,
 				04CC86C620290C4B00CC3699 /* Resources */,
+				5AC594E3F1CFB17B0CA73F55 /* [CP] Embed Pods Frameworks */,
+				BAA218A3993AE49FADF4B571 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CC86EB20290C4B00CC3699 /* Build configuration list for PBXNativeTarget "desafioZapVivaRealTests" */;
 			buildPhases = (
+				43DE1DE16815B7A0EF2A9CBF /* [CP] Check Pods Manifest.lock */,
 				04CC86DB20290C4B00CC3699 /* Sources */,
 				04CC86DC20290C4B00CC3699 /* Frameworks */,
 				04CC86DD20290C4B00CC3699 /* Resources */,
+				07618F1C278E49C9FD6D36C6 /* [CP] Embed Pods Frameworks */,
+				243173BC9D4ED644D0A0B76B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,7 +330,7 @@
 				TargetAttributes = {
 					04CC86C720290C4B00CC3699 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					04CC86DE20290C4B00CC3699 = {
 						CreatedOnToolsVersion = 9.1;
@@ -334,20 +378,134 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06963DD9F9E5C40AA2CF0D5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioZapVivaReal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		07618F1C278E49C9FD6D36C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaRealTests/Pods-desafioZapVivaRealTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaRealTests/Pods-desafioZapVivaRealTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		243173BC9D4ED644D0A0B76B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaRealTests/Pods-desafioZapVivaRealTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43DE1DE16815B7A0EF2A9CBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioZapVivaRealTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC594E3F1CFB17B0CA73F55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA218A3993AE49FADF4B571 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04CC86C420290C4B00CC3699 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CC8700202A929600CC3699 /* TopGameManager.swift in Sources */,
+				04D635BB202F9D76008CD103 /* TopGamesManager.swift in Sources */,
 				04CC86F5202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */,
 				04CC8710202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */,
+				04D635B8202F915C008CD103 /* APIRequest.swift in Sources */,
 				04CC86FC202A7B0600CC3699 /* Game.swift in Sources */,
 				04CC86F8202A7AF400CC3699 /* GameDetailViewController.swift in Sources */,
 				04CC870D202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */,
 				04CC86F2202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */,
+				04D635AB202F727B008CD103 /* AppManager.swift in Sources */,
 				04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */,
 				04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */,
+				04D635AD202F729B008CD103 /* GamesManager.swift in Sources */,
+				04D635B4202F83C0008CD103 /* HTTPService.swift in Sources */,
+				04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,14 +513,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044583B8202F6B99001ED081 /* TopGamesSpec.swift in Sources */,
 				04CC86F3202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */,
-				04CC86FD202A7B0600CC3699 /* Game.swift in Sources */,
-				04CC8701202A929600CC3699 /* TopGameManager.swift in Sources */,
 				04CC86F9202A7AF400CC3699 /* GameDetailViewController.swift in Sources */,
 				04CC8711202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */,
 				04CC86F6202A7AD100CC3699 /* FavoriteGameViewController.swift in Sources */,
 				04CC870E202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */,
-				04CC86E420290C4B00CC3699 /* desafioZapVivaRealTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,15 +661,18 @@
 		};
 		04CC86E920290C4B00CC3699 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9CC7D0814C5FC18169AD9D5 /* Pods-desafioZapVivaReal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K39A2UQ6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,15 +681,18 @@
 		};
 		04CC86EA20290C4B00CC3699 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A984B94E3C8EFBD95EB727F /* Pods-desafioZapVivaReal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K39A2UQ6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,6 +701,7 @@
 		};
 		04CC86EC20290C4B00CC3699 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D91177BEAB1881CA90EB7C /* Pods-desafioZapVivaRealTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +719,7 @@
 		};
 		04CC86ED20290C4B00CC3699 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F736453E6F71F36C1DD5D373 /* Pods-desafioZapVivaRealTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

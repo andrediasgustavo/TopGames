@@ -15,7 +15,7 @@ class FavoriteGamesCollectionViewCell: UICollectionViewCell {
     
     func setup(game: Game) {
         self.gameName.text = game.name
-        self.gameImage.image = UIImage(named: game.banner)
+        self.gameImage.image = UIImage(named: game.banner!)
     }
     
     

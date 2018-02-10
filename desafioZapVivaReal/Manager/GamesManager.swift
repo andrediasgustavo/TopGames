@@ -1,9 +1,13 @@
 //
-//  TopGameCoordinator.swift
+//  GamesManager.swift
 //  desafioZapVivaReal
 //
-//  Created by Mac on 06/02/18.
+//  Created by Mac on 10/02/18.
 //  Copyright © 2018 Mac. All rights reserved.
 //
 
 import Foundation
+
+class GamesManager: AppManager {
+    
+}
