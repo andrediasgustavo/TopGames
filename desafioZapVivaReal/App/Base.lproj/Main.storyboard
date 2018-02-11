@@ -20,23 +20,26 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZSj-Ew-Ubt">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="QSj-oD-vf8">
-                                    <size key="itemSize" width="158" height="169"/>
+                                    <size key="itemSize" width="170" height="169"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopGamesCell" id="SMH-Lm-MW8" customClass="TopGamesCollectionViewCell" customModule="desafioZapVivaReal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="169"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-Iu-KUe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="169"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3O-j9-zC6">
-                                                    <rect key="frame" x="128" y="7" width="24" height="24"/>
+                                                    <rect key="frame" x="140" y="7" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="5T7-DF-WMQ"/>
                                                         <constraint firstAttribute="height" constant="24" id="AFG-SR-TkL"/>
@@ -52,11 +55,16 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YIM-Iu-KUe" secondAttribute="trailing" id="6zw-fk-C6E"/>
+                                            <constraint firstItem="YIM-Iu-KUe" firstAttribute="top" secondItem="SMH-Lm-MW8" secondAttribute="top" id="92n-6i-uyj"/>
+                                            <constraint firstAttribute="bottom" secondItem="YIM-Iu-KUe" secondAttribute="bottom" id="AVh-OQ-GDT"/>
+                                            <constraint firstItem="YIM-Iu-KUe" firstAttribute="leading" secondItem="SMH-Lm-MW8" secondAttribute="leading" id="H55-Ml-IZ2"/>
                                             <constraint firstAttribute="trailing" secondItem="D3O-j9-zC6" secondAttribute="trailing" constant="6" id="Lpb-7M-loj"/>
                                             <constraint firstItem="D3O-j9-zC6" firstAttribute="top" secondItem="SMH-Lm-MW8" secondAttribute="top" constant="7" id="bQk-hg-rBn"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="gameImage" destination="D3O-j9-zC6" id="trO-gz-wop"/>
+                                            <outlet property="favorited" destination="D3O-j9-zC6" id="XKr-zf-Aqa"/>
+                                            <outlet property="gameImage" destination="YIM-Iu-KUe" id="MG9-cM-HUW"/>
                                             <outlet property="gameName" destination="3A0-jX-Hm1" id="xL8-Hi-g5e"/>
                                         </connections>
                                     </collectionViewCell>
@@ -151,7 +159,7 @@
         <scene sceneID="DKH-Rq-S1i">
             <objects>
                 <tabBarController id="qFf-sk-BdN" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pc0-uN-Fct">
+                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pc0-uN-Fct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -177,7 +185,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.30196078431372547" green="0.21568627450980393" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -200,34 +208,58 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-rA-aI5">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iqU-ga-iT0">
-                                    <size key="itemSize" width="176" height="137"/>
+                                    <size key="itemSize" width="170" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteGamesCell" id="lC0-f9-sqc" customClass="FavoriteGamesCollectionViewCell" customModule="desafioZapVivaReal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="176" height="137"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="176" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQ7-Qh-9xP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJs-KJ-Ybh">
-                                                    <rect key="frame" x="142" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="136" y="10" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="DXR-bj-CRc"/>
                                                         <constraint firstAttribute="width" constant="24" id="UWn-Do-PgE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoT-hu-kgm">
+                                                    <rect key="frame" x="0.0" y="139" width="170" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="rqc-hG-aoo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JQ7-Qh-9xP" secondAttribute="bottom" id="4HE-e8-fGt"/>
+                                            <constraint firstAttribute="trailing" secondItem="JQ7-Qh-9xP" secondAttribute="trailing" id="EZe-zm-77w"/>
+                                            <constraint firstItem="JQ7-Qh-9xP" firstAttribute="leading" secondItem="lC0-f9-sqc" secondAttribute="leading" id="I7U-SZ-isF"/>
+                                            <constraint firstItem="JQ7-Qh-9xP" firstAttribute="top" secondItem="lC0-f9-sqc" secondAttribute="top" id="Iuk-bH-2y0"/>
+                                            <constraint firstItem="YoT-hu-kgm" firstAttribute="leading" secondItem="lC0-f9-sqc" secondAttribute="leading" id="Syp-KF-luN"/>
                                             <constraint firstAttribute="trailing" secondItem="aJs-KJ-Ybh" secondAttribute="trailing" constant="10" id="YJq-nN-r9s"/>
+                                            <constraint firstAttribute="trailing" secondItem="YoT-hu-kgm" secondAttribute="trailing" id="iaU-ir-aIQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="YoT-hu-kgm" secondAttribute="bottom" id="jqf-s3-3Ak"/>
                                             <constraint firstItem="aJs-KJ-Ybh" firstAttribute="top" secondItem="lC0-f9-sqc" secondAttribute="top" constant="10" id="ovO-zp-bjD"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="favorited" destination="aJs-KJ-Ybh" id="YGx-8Q-4PE"/>
+                                            <outlet property="gameImage" destination="JQ7-Qh-9xP" id="aus-30-0zt"/>
+                                            <outlet property="gameName" destination="YoT-hu-kgm" id="Sjb-ZS-nby"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -256,7 +288,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.30196078431372547" green="0.21568627450980393" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>

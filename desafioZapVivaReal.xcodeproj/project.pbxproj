@@ -30,6 +30,12 @@
 		04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B5202F8449008CD103 /* BaseAPI.swift */; };
 		04D635B8202F915C008CD103 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B7202F915C008CD103 /* APIRequest.swift */; };
 		04D635BB202F9D76008CD103 /* TopGamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635BA202F9D76008CD103 /* TopGamesManager.swift */; };
+		04DE78EB202FCC54000E073C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DE78E6202FCC54000E073C /* Roboto-Bold.ttf */; };
+		04DE78EC202FCC54000E073C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DE78E7202FCC54000E073C /* Roboto-Light.ttf */; };
+		04DE78ED202FCC54000E073C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DE78E8202FCC54000E073C /* Roboto-Medium.ttf */; };
+		04DE78EE202FCC54000E073C /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DE78E9202FCC54000E073C /* Roboto-LightItalic.ttf */; };
+		04DE78EF202FCC54000E073C /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DE78EA202FCC54000E073C /* Roboto-Regular.ttf */; };
+		04DE78F2202FCC8A000E073C /* FavoriteGamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE78F1202FCC8A000E073C /* FavoriteGamesManager.swift */; };
 		0985D376A8CEDEE08BE398E5 /* Pods_desafioZapVivaReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F3D8C086ED6B7AB65F7EC /* Pods_desafioZapVivaReal.framework */; };
 		347818367B278D69BED44548 /* Pods_desafioZapVivaRealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA86BC3AB64B1B57FC58231C /* Pods_desafioZapVivaRealTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +73,12 @@
 		04D635B5202F8449008CD103 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		04D635B7202F915C008CD103 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		04D635BA202F9D76008CD103 /* TopGamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesManager.swift; sourceTree = "<group>"; };
+		04DE78E6202FCC54000E073C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		04DE78E7202FCC54000E073C /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		04DE78E8202FCC54000E073C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		04DE78E9202FCC54000E073C /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		04DE78EA202FCC54000E073C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		04DE78F1202FCC8A000E073C /* FavoriteGamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesManager.swift; sourceTree = "<group>"; };
 		0A984B94E3C8EFBD95EB727F /* Pods-desafioZapVivaReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaReal.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal.release.xcconfig"; sourceTree = "<group>"; };
 		880F3D8C086ED6B7AB65F7EC /* Pods_desafioZapVivaReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioZapVivaReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9CC7D0814C5FC18169AD9D5 /* Pods-desafioZapVivaReal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapVivaReal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafioZapVivaReal/Pods-desafioZapVivaReal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +163,7 @@
 		04CC86EF202A792100CC3699 /* FavoriteGames */ = {
 			isa = PBXGroup;
 			children = (
+				04DE78F0202FCC70000E073C /* Manager */,
 				04CC8707202A931600CC3699 /* ViewController */,
 				04CC8705202A930500CC3699 /* UI */,
 			);
@@ -216,6 +229,7 @@
 		04CC870B202A936600CC3699 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				04DE78E5202FCC39000E073C /* Fonts */,
 				04CC86CB20290C4B00CC3699 /* AppDelegate.swift */,
 				04CC86CF20290C4B00CC3699 /* Main.storyboard */,
 				04CC86D520290C4B00CC3699 /* Assets.xcassets */,
@@ -252,6 +266,26 @@
 			);
 			name = Manager;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		04DE78E5202FCC39000E073C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04DE78E6202FCC54000E073C /* Roboto-Bold.ttf */,
+				04DE78E7202FCC54000E073C /* Roboto-Light.ttf */,
+				04DE78E9202FCC54000E073C /* Roboto-LightItalic.ttf */,
+				04DE78E8202FCC54000E073C /* Roboto-Medium.ttf */,
+				04DE78EA202FCC54000E073C /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		04DE78F0202FCC70000E073C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04DE78F1202FCC8A000E073C /* FavoriteGamesManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		5C2B696F38BCECEB61C435A0 /* Frameworks */ = {
@@ -365,6 +399,11 @@
 			files = (
 				04CC86D920290C4B00CC3699 /* LaunchScreen.storyboard in Resources */,
 				04CC86D620290C4B00CC3699 /* Assets.xcassets in Resources */,
+				04DE78EF202FCC54000E073C /* Roboto-Regular.ttf in Resources */,
+				04DE78EE202FCC54000E073C /* Roboto-LightItalic.ttf in Resources */,
+				04DE78ED202FCC54000E073C /* Roboto-Medium.ttf in Resources */,
+				04DE78EC202FCC54000E073C /* Roboto-Light.ttf in Resources */,
+				04DE78EB202FCC54000E073C /* Roboto-Bold.ttf in Resources */,
 				04CC86D120290C4B00CC3699 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +543,7 @@
 				04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */,
 				04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */,
 				04D635AD202F729B008CD103 /* GamesManager.swift in Sources */,
+				04DE78F2202FCC8A000E073C /* FavoriteGamesManager.swift in Sources */,
 				04D635B4202F83C0008CD103 /* HTTPService.swift in Sources */,
 				04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */,
 			);
