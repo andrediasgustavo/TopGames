@@ -10,4 +10,9 @@ import Foundation
 
 class GamesManager: AppManager {
     
+    var topGamesManager: TopGamesManager?
+    var topGamesVC: TopGamesViewController?
+    
+    
+    
 }
