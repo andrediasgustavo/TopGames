@@ -10,6 +10,10 @@
 import Foundation
 import UIKit
 
+protocol FavoriteGamesDelegate: class {
+    
+}
+
 class FavoriteGamesManager: UICollectionViewFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var games: [Game]

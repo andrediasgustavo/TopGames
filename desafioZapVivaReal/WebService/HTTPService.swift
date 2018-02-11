@@ -18,19 +18,20 @@ class HttpService: NSObject{
     func doGet(url:String, completion:@escaping (([Game]) -> Void)) {
         let headers: HTTPHeaders = [
             "Client-ID": clientID,
-            "Accept": "application/vnd.twitchtv.v5+json",
-            "Content-Type": "application/json; charset=utf-8"
+            "Accept": "application/vnd.twitchtv.v5+json"
         ]
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         Alamofire.request(url, method: .get, headers: headers).responseJSON { response in
             
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             debugPrint(response.request!)
             
-            let games = Mapper<Game>().mapArray(JSONArray: response.result.value as! [[String : Any]])
+            let result = (response.result.value as! [String : AnyObject])["top"] as! [[String : AnyObject]]
+        
+            let games = Mapper<Game>().mapArray(JSONArray: result)
 
             completion(games)
         }

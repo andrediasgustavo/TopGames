@@ -11,24 +11,56 @@ import UIKit
 class TopGamesViewController: UIViewController  {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataSource: TopGamesManager?
-    var delegate: GamesManager?
+    var manager: TopGamesManager?
+    var delegate: TopGamesDelegate?
+    var apiRequest: APIRequest?
+    var page: Int?
+    var games: [Game]?
+
     
-    init(dataSource: TopGamesManager) {
-        self.dataSource = dataSource
-        self.delegate = GamesManager()
-        super.init(nibName: nil, bundle: nil)
+    init(delegate: TopGamesDelegate, page: Int, apiRequest: APIRequest) {
+         super.init(nibName: nil, bundle: nil)
+        self.delegate = delegate
+        self.page = page
+        self.apiRequest = apiRequest
+        self.manager = TopGamesManager()
+    
+        self.getGames()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+        
+       
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.dataSource = dataSource
-        self.collectionView.delegate = dataSource
+       
+        self.collectionView.dataSource = self.manager
+        self.collectionView.delegate = self.manager
+        self.collectionView.reloadData()
+        self.collectionView.layoutIfNeeded()
+        view.layoutIfNeeded()
     }
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
+    
+    func getGames() {
+        
+        self.apiRequest?.getGames(page: self.page!, completion: { (gamesResult) in
+          
+            for game in gamesResult {
+                self.manager?.games?.append(game)
+            }
+        })
+//        self.collectionView.layoutIfNeeded()
+    }
+    
+   
 }

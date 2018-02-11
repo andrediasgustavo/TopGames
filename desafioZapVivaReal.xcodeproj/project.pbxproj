@@ -24,7 +24,6 @@
 		04CC870E202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */; };
 		04CC8710202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
 		04CC8711202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */; };
-		04D635AB202F727B008CD103 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635AA202F727B008CD103 /* AppManager.swift */; };
 		04D635AD202F729B008CD103 /* GamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635AC202F729B008CD103 /* GamesManager.swift */; };
 		04D635B4202F83C0008CD103 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B3202F83C0008CD103 /* HTTPService.swift */; };
 		04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D635B5202F8449008CD103 /* BaseAPI.swift */; };
@@ -67,7 +66,6 @@
 		04CC86FB202A7B0600CC3699 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		04CC870C202A9C6100CC3699 /* TopGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		04CC870F202AA25500CC3699 /* FavoriteGamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesCollectionViewCell.swift; sourceTree = "<group>"; };
-		04D635AA202F727B008CD103 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		04D635AC202F729B008CD103 /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
 		04D635B3202F83C0008CD103 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		04D635B5202F8449008CD103 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 		04D635A9202F7261008CD103 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				04D635AA202F727B008CD103 /* AppManager.swift */,
 				04D635AC202F729B008CD103 /* GamesManager.swift */,
 			);
 			path = Manager;
@@ -539,7 +536,6 @@
 				04CC86F8202A7AF400CC3699 /* GameDetailViewController.swift in Sources */,
 				04CC870D202A9C6100CC3699 /* TopGamesCollectionViewCell.swift in Sources */,
 				04CC86F2202A7A7F00CC3699 /* TopGamesViewController.swift in Sources */,
-				04D635AB202F727B008CD103 /* AppManager.swift in Sources */,
 				04CC86D420290C4B00CC3699 /* desafioZapVivaReal.xcdatamodeld in Sources */,
 				04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */,
 				04D635AD202F729B008CD103 /* GamesManager.swift in Sources */,

@@ -10,18 +10,16 @@
 import UIKit
 import ObjectMapper
 
-class APIRquest: HttpService {
+class APIRequest: HttpService {
     
     let baseAPI = BaseAPI()
-    var game: Game?
     
     // MARK: - Methods Services
     func getGames(page:Int, completion: (([Game]) -> Void)!) {
         
         self.doGet(url: (baseAPI.getGamesWithPagination(page))) { (data) in
-            var games = [Game]()
-            games = data
-            completion(games)
+            
+            completion(data)
         }
     }
 }

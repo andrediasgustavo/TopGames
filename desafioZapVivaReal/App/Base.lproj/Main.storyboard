@@ -13,7 +13,7 @@
         <!--Top Games-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="TopGamesViewController" id="BYZ-38-t0r" customClass="TopGamesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopGamesViewController" id="BYZ-38-t0r" customClass="TopGamesViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="U4l-PT-7Nd" kind="relationship" relationship="viewControllers" id="shH-va-UGM"/>
-                        <segue destination="8W6-fz-bYL" kind="relationship" relationship="viewControllers" id="P0X-cE-Xk4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4R-ZZ-JZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,14 +199,13 @@
         <!--Favoritos-->
         <scene sceneID="sFA-TW-zLC">
             <objects>
-                <viewController storyboardIdentifier="FavoriteGamesViewController" id="1bW-Yc-ME6" customClass="FavoriteGamesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteGamesViewController" id="1bW-Yc-ME6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAb-dn-7Ci">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-rA-aI5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-rA-aI5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iqU-ga-iT0">
                                     <size key="itemSize" width="170" height="180"/>
@@ -265,13 +263,16 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QvP-rA-aI5" firstAttribute="trailing" secondItem="Zpm-fK-CXA" secondAttribute="trailing" id="Ijx-CX-q3c"/>
+                            <constraint firstItem="QvP-rA-aI5" firstAttribute="top" secondItem="Zpm-fK-CXA" secondAttribute="top" id="iO3-f5-aEv"/>
+                            <constraint firstItem="QvP-rA-aI5" firstAttribute="leading" secondItem="Zpm-fK-CXA" secondAttribute="leading" id="uyn-8o-6fF"/>
+                            <constraint firstItem="QvP-rA-aI5" firstAttribute="bottom" secondItem="Zpm-fK-CXA" secondAttribute="bottom" id="x9V-MA-KcU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zpm-fK-CXA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="12C-b3-mvX"/>
                     <navigationItem key="navigationItem" title="Favoritos" id="3iI-St-lcK"/>
-                    <connections>
-                        <outlet property="collectionView" destination="QvP-rA-aI5" id="kH2-BB-T29"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgj-Te-eoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
