@@ -14,17 +14,22 @@ class FavoriteGamesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var favorited: UIImageView!
     
-    func setup(game: Game) {
-        self.gameName.text = game.name
-        self.gameImage.image = UIImage(named: game.banner!)
-    }
-    
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setup(game: Game) {
+        let url = URL(string: (game.gameImageList?.boxImages?.bannerMedium)!)
+        self.gameImage.kf.setImage(with: url)
+        self.gameName.text = game.gameName?.name!
+        self.favorited.image = UIImage(named: "favoriteGame")
+    }
+    
+    @IBAction func favoriteGame(_ sender: Any) {
+        self.favorited.image = UIImage(named: "notFavorite")
+    }
     
 }
 

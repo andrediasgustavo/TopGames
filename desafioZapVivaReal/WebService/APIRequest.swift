@@ -12,13 +12,14 @@ import ObjectMapper
 
 class APIRequest: HttpService {
     
+    static let shared = APIRequest()
+    
     let baseAPI = BaseAPI()
     
     // MARK: - Methods Services
     func getGames(page:Int, completion: (([Game]) -> Void)!) {
         
         self.doGet(url: (baseAPI.getGamesWithPagination(page))) { (data) in
-            
             completion(data)
         }
     }

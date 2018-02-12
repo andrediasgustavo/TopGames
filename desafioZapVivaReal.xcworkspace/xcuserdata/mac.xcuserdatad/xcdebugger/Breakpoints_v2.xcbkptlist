@@ -9,77 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/TopGames/New Group/TopGamesManager.swift"
-            timestampString = "540079763.617713"
+            filePath = "desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
+            timestampString = "540167434.193489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/App/AppDelegate.swift"
-            timestampString = "540079763.617815"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/Manager/GamesManager.swift"
-            timestampString = "540079763.617915"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "start()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/TopGames/New Group/TopGamesManager.swift"
-            timestampString = "540079763.618005"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/Manager/GamesManager.swift"
-            timestampString = "540079763.618078"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "init()"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-            timestampString = "540079763.618161"
+            timestampString = "540167434.193625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "getGames()"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-            timestampString = "540079763.618605"
+            filePath = "desafioZapVivaReal/GamesDetail/ViewController/GameDetailViewController.swift"
+            timestampString = "540167434.1937439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "getGames()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,141 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-            timestampString = "540079763.618912"
+            filePath = "desafioZapVivaReal/GamesDetail/ViewController/GameDetailViewController.swift"
+            timestampString = "540167434.194321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/WebService/APIRequest.swift"
-            timestampString = "540079763.619211"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getGames(page:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-            timestampString = "540079763.619274"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "getGames()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "desafioZapVivaReal.TopGamesViewController.getGames() -&gt; ()"
-                  moduleName = "desafioZapVivaReal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/EstudoiOS/iOSDesignPatterns/desafioZapVivaReal/desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-                  timestampString = "540079696.525846"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;desafioZapVivaReal.Game&gt;) -&gt; () in desafioZapVivaReal.TopGamesViewController.getGames() -&gt; ()"
-                  moduleName = "desafioZapVivaReal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/EstudoiOS/iOSDesignPatterns/desafioZapVivaReal/desafioZapVivaReal/TopGames/ViewController/TopGamesViewController.swift"
-                  timestampString = "540079696.52874"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/WebService/APIRequest.swift"
-            timestampString = "540079763.619543"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "getGames(page:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "desafioZapVivaReal.APIRequest.getGames(page: Swift.Int, completion: Swift.ImplicitlyUnwrappedOptional&lt;(Swift.Array&lt;desafioZapVivaReal.Game&gt;) -&gt; ()&gt;) -&gt; ()"
-                  moduleName = "desafioZapVivaReal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/EstudoiOS/iOSDesignPatterns/desafioZapVivaReal/desafioZapVivaReal/WebService/APIRequest.swift"
-                  timestampString = "540079696.5362329"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;desafioZapVivaReal.Game&gt;) -&gt; () in desafioZapVivaReal.APIRequest.getGames(page: Swift.Int, completion: Swift.ImplicitlyUnwrappedOptional&lt;(Swift.Array&lt;desafioZapVivaReal.Game&gt;) -&gt; ()&gt;) -&gt; ()"
-                  moduleName = "desafioZapVivaReal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/EstudoiOS/iOSDesignPatterns/desafioZapVivaReal/desafioZapVivaReal/WebService/APIRequest.swift"
-                  timestampString = "540079696.541977"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafioZapVivaReal/WebService/HTTPService.swift"
-            timestampString = "540079763.619603"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "doGet(url:completion:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setupVC(game:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

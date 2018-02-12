@@ -11,16 +11,16 @@ import ObjectMapper
 
 final class Game: Mappable {
     
-    var name: String?
-    var banner: String?
     var visualizations: Int?
+    var gameName: GameName?
+    var gameImageList: GameImageList?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        name           <- map["name"]
-        banner         <- map["medium"]
+        gameName           <- map["game"]
+        gameImageList      <- map["game"]
         visualizations <- map["viewers"]
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TopGamesCollectionViewCell: UICollectionViewCell {
     
@@ -14,14 +15,19 @@ class TopGamesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var favorited: UIImageView!
     
-    func setup(game: Game) {
-        self.gameName.text = game.name
-        self.gameImage.image = UIImage(named: game.banner!)
-        self.favorited.image = UIImage(named: "")
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+ 
+    func setup(game: Game) {
+        let url = URL(string: (game.gameImageList?.boxImages?.bannerMedium)!)
+        self.gameImage.kf.setImage(with: url)
+        self.gameName.text = game.gameName?.name!
+        self.favorited.image = UIImage(named: "notFavorite")
+    }
+    
+    @IBAction func favoriteGame(_ sender: Any) {
+        self.favorited.image = UIImage(named: "favoriteGame")
     }
 
     

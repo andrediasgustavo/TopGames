@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.6.0)
+  - Kingfisher (4.6.1)
   - Nimble (7.0.3)
   - ObjectMapper (3.1.0)
   - Quick (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
   - Nimble
   - ObjectMapper
   - Quick
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 7e8731573f29615d6e1a724339cb6659f6b43b36
+PODFILE CHECKSUM: 3fe3422c0250eed939f3938f313ffd261ba8ca56
 
 COCOAPODS: 1.3.1

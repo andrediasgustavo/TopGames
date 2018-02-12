@@ -7,6 +7,7 @@ target 'desafioZapVivaReal' do
   
   pod 'Alamofire'
   pod 'ObjectMapper'
+  pod 'Kingfisher'
 
   # Pods for desafioZapVivaReal
 
