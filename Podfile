@@ -8,6 +8,7 @@ target 'desafioZapVivaReal' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Kingfisher'
+  pod 'ReachabilitySwift'
 
   # Pods for desafioZapVivaReal
 

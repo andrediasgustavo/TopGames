@@ -11,9 +11,11 @@ import CoreData
 
 class TopGamesViewController: UIViewController, FavoriteGame {
 
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var bottomActivityIndicator: UIActivityIndicatorView!
     var refreshControl: UIRefreshControl?
     var apiRequest: APIRequest?
     var games: [Game]?
@@ -23,7 +25,8 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     var page: Int?
     var limit: Int?
     var favoriteGamesViewController: FavoriteGameViewController?
-    
+    let network = NetworkManager.sharedInstance
+  
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -32,6 +35,9 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.network.reachability.whenUnreachable = { reachability in
+            self.showOfflinePage()
+        }
         self.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshGames), for: .valueChanged)
         self.searchBar.showsCancelButton = false
@@ -49,7 +55,8 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        self.bottomActivityIndicator.isHidden = true
+        self.getGames(limit: 20, pages: self.page!)
     }
     
     //MARK: Methods        
@@ -66,31 +73,33 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     }
     
     func getGames(limit: Int, pages: Int) {
-        
-       DispatchQueue.global(qos: .userInitiated).async {
-        
+        DispatchQueue.main.async {
             APIRequest.shared.getGames(limit: limit, pages: pages, completion: { (gamesResult) in
                 
-                 DispatchQueue.main.async {
-              
-                    if !gamesResult.isEmpty {
-                        for game in gamesResult {
-                            self.games?.append(game)
-                            self.collectionView.reloadData()
-                        }
-                        self.activityIndicator.stopAnimating()
-                        self.collectionView.isHidden = false
-                        self.refreshControl?.endRefreshing()
-                    } else {
-                        self.activityIndicator.stopAnimating()
-                        self.collectionView.isHidden = false
-                        self.refreshControl?.endRefreshing()
+                if !gamesResult.isEmpty {
+                    for game in gamesResult {
+                        self.games?.append(game)
+                        self.collectionView.reloadData()
                     }
                 }
+                self.activityIndicator.stopAnimating()
+                self.collectionView.isHidden = false
+                self.bottomActivityIndicator.stopAnimating()
+                self.bottomActivityIndicator.isHidden = true
+                self.refreshControl?.endRefreshing()
             })
+        }
+        
+    }
+    
+    private func showOfflinePage() -> Void {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "NetworkUnavailable", sender: self)
         }
     }
 }
+
+
 
 
 //MARK: SearchBar
@@ -149,8 +158,8 @@ extension TopGamesViewController:  UICollectionViewDataSource {
         if self.useFilteredArray == false {
             if indexPath.row == (self.games?.count)! - 1 {
                 self.page! = self.page! + 20
-                self.activityIndicator.startAnimating()
-                self.collectionView.isHidden = true
+                  self.bottomActivityIndicator.isHidden = false
+                self.bottomActivityIndicator.startAnimating()
                 self.getGames(limit: self.limit! , pages: self.page!)
                 self.collectionView.reloadData()
             }

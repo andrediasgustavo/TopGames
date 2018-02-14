@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D339C831D7A076B83C72A613145346E0"
-               BuildableName = "Pods_desafioZapVivaReal.framework"
-               BlueprintName = "Pods-desafioZapVivaReal"
+               BlueprintIdentifier = "47964CB823999CDD29D1E74F2167D6E6"
+               BuildableName = "Reachability.framework"
+               BlueprintName = "ReachabilitySwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D339C831D7A076B83C72A613145346E0"
-            BuildableName = "Pods_desafioZapVivaReal.framework"
-            BlueprintName = "Pods-desafioZapVivaReal"
+            BlueprintIdentifier = "47964CB823999CDD29D1E74F2167D6E6"
+            BuildableName = "Reachability.framework"
+            BlueprintName = "ReachabilitySwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

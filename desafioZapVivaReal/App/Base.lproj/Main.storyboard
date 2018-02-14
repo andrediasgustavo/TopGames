@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qFf-sk-BdN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qFf-sk-BdN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4096" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,9 @@
     <customFonts key="customFonts">
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -29,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OlP-BH-tgH">
-                                <rect key="frame" x="168.5" y="314.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="HVK-8R-wmX"/>
                                     <constraint firstAttribute="height" constant="37" id="aNH-54-V02"/>
@@ -53,7 +56,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-Iu-KUe">
-                                                    <rect key="frame" x="27.5" y="20" width="132" height="184"/>
+                                                    <rect key="frame" x="28" y="20" width="132" height="184"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="132" id="0Da-O1-sWW"/>
                                                         <constraint firstAttribute="height" constant="184" id="9eZ-1g-M6U"/>
@@ -69,7 +72,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-5h-LCj" userLabel="Favorite Game Button">
-                                                    <rect key="frame" x="143.5" y="4" width="32" height="32"/>
+                                                    <rect key="frame" x="144" y="4" width="32" height="32"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" button="YES" image="YES" selected="YES"/>
                                                     </accessibility>
@@ -107,18 +110,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="V57-xw-s3M"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-LZ-vHL">
+                                <rect key="frame" x="169" y="561" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Lzb-4J-Esh"/>
+                                    <constraint firstAttribute="width" constant="37" id="M4I-Pf-aso"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YQq-nV-8al" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MGC-V9-7PJ"/>
                             <constraint firstItem="ZSj-Ew-Ubt" firstAttribute="top" secondItem="YQq-nV-8al" secondAttribute="bottom" id="Nv6-KX-F8p"/>
+                            <constraint firstItem="ZSj-Ew-Ubt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Phb-3a-AMr"/>
                             <constraint firstItem="ZSj-Ew-Ubt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qxa-AL-6EA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x5W-LZ-vHL" secondAttribute="bottom" constant="20" id="SRp-Sc-rhz"/>
                             <constraint firstItem="YQq-nV-8al" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bGv-uN-S6p"/>
                             <constraint firstItem="OlP-BH-tgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cSj-6p-xhJ"/>
                             <constraint firstItem="ZSj-Ew-Ubt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ev6-5g-YZ4"/>
-                            <constraint firstItem="ZSj-Ew-Ubt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="n8S-ii-4Id"/>
                             <constraint firstItem="OlP-BH-tgH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ydE-pY-Dg9"/>
                             <constraint firstItem="YQq-nV-8al" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zOB-co-Y9V"/>
+                            <constraint firstItem="x5W-LZ-vHL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUL-7L-M5C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -128,14 +140,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="OlP-BH-tgH" id="yxD-QZ-lCh"/>
+                        <outlet property="bottomActivityIndicator" destination="x5W-LZ-vHL" id="N2v-yT-GFb"/>
                         <outlet property="collectionView" destination="ZSj-Ew-Ubt" id="Ndh-lR-Too"/>
                         <outlet property="searchBar" destination="YQq-nV-8al" id="xce-5m-2Lj"/>
                         <segue destination="6W6-Sb-36t" kind="show" identifier="DetailViewControllerSegue" id="rdr-pj-TIc"/>
+                        <segue destination="qd6-Uz-Sb9" kind="show" identifier="NetworkUnavailable" id="PEf-2W-ZaO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="89.505247376311857"/>
+            <point key="canvasLocation" x="612" y="221"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="rFa-Oc-zzB">
@@ -215,13 +229,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXb-C9-7DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="832.53373313343332"/>
+            <point key="canvasLocation" x="612" y="1048"/>
+        </scene>
+        <!--Sem Conexão-->
+        <scene sceneID="YkK-Cc-HcU">
+            <objects>
+                <viewController storyboardIdentifier="OfflineViewcontroller" id="Asl-gK-KHC" customClass="OfflineViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfl-7y-BFb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lW-Ts-uOx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notConnected" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-pD-Hag">
+                                        <rect key="frame" x="97" y="211" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="9iO-CZ-gcY"/>
+                                            <constraint firstAttribute="width" constant="180" id="kUE-ga-qFe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você está offline, conecte-se a internet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fit-Xq-YHe">
+                                        <rect key="frame" x="16" y="399" width="343" height="20"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Fit-Xq-YHe" firstAttribute="leading" secondItem="5lW-Ts-uOx" secondAttribute="leading" constant="16" id="0fO-Bx-vkU"/>
+                                    <constraint firstItem="Fit-Xq-YHe" firstAttribute="top" secondItem="b2Z-pD-Hag" secondAttribute="bottom" constant="8" id="315-xl-1Sd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fit-Xq-YHe" secondAttribute="trailing" constant="16" id="dgP-cV-bXT"/>
+                                    <constraint firstItem="b2Z-pD-Hag" firstAttribute="centerY" secondItem="5lW-Ts-uOx" secondAttribute="centerY" id="oUb-EE-Nfe"/>
+                                    <constraint firstItem="b2Z-pD-Hag" firstAttribute="centerX" secondItem="5lW-Ts-uOx" secondAttribute="centerX" id="qtk-JP-btI"/>
+                                    <constraint firstItem="Fit-Xq-YHe" firstAttribute="centerX" secondItem="5lW-Ts-uOx" secondAttribute="centerX" id="wEf-CW-z5I"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5lW-Ts-uOx" firstAttribute="leading" secondItem="JnO-7J-iLI" secondAttribute="leading" id="8c7-Zr-CIe"/>
+                            <constraint firstItem="5lW-Ts-uOx" firstAttribute="top" secondItem="JnO-7J-iLI" secondAttribute="top" id="HIK-IM-jjp"/>
+                            <constraint firstItem="JnO-7J-iLI" firstAttribute="bottom" secondItem="5lW-Ts-uOx" secondAttribute="bottom" id="iKe-vp-t7L"/>
+                            <constraint firstItem="JnO-7J-iLI" firstAttribute="trailing" secondItem="5lW-Ts-uOx" secondAttribute="trailing" id="inv-gm-nN2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JnO-7J-iLI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sem Conexão" id="21k-VK-DuW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXL-ED-Nzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-818" y="166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XDz-ei-FjN">
+            <objects>
+                <navigationController id="qd6-Uz-Sb9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G6o-4t-iK8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30196078431372547" green="0.21568627450980393" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Asl-gK-KHC" kind="relationship" relationship="rootViewController" id="Yto-iL-OJm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHW-Zo-RJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817" y="-694"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="DKH-Rq-S1i">
             <objects>
-                <tabBarController id="qFf-sk-BdN" customClass="MainTabBarViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pc0-uN-Fct">
+                <tabBarController storyboardIdentifier="MainTabBar" id="qFf-sk-BdN" customClass="MainTabBarViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pc0-uN-Fct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -230,11 +315,12 @@
                     <connections>
                         <segue destination="U4l-PT-7Nd" kind="relationship" relationship="viewControllers" id="shH-va-UGM"/>
                         <segue destination="8W6-fz-bYL" kind="relationship" relationship="viewControllers" id="ddA-mP-DQR"/>
+                        <segue destination="qd6-Uz-Sb9" kind="show" identifier="NetworkUnavailable" id="Fmv-Ny-CGq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4R-ZZ-JZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="-1499"/>
+            <point key="canvasLocation" x="612" y="-1525"/>
         </scene>
         <!--Top Games-->
         <scene sceneID="Btb-Oc-ath">
@@ -257,7 +343,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pjc-cB-6cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-694"/>
+            <point key="canvasLocation" x="612" y="-694"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="sFA-TW-zLC">
@@ -368,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgj-Te-eoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.8" y="89.505247376311857"/>
+            <point key="canvasLocation" x="2214" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lXz-ar-1si">
@@ -391,12 +477,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1RF-1F-HN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="-694"/>
+            <point key="canvasLocation" x="2215" y="-694"/>
         </scene>
     </scenes>
     <resources>
         <image name="favoriteGame" width="60" height="60"/>
         <image name="homeIconTabBar" width="29" height="29"/>
+        <image name="notConnected" width="76" height="76"/>
         <image name="notFavorite" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fmv-Ny-CGq"/>
+    </inferredMetricsTieBreakers>
 </document>

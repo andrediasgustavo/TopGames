@@ -25,15 +25,23 @@ class HttpService: NSObject{
         
         Alamofire.request(url, method: .get, headers: headers).responseJSON { response in
             
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch response.result {
+            case .success:
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
+                debugPrint(response.request!)
+                
+                let result = (response.result.value as! [String : AnyObject])["top"] as! [[String : AnyObject]]
+                
+                let games = Mapper<Game>().mapArray(JSONArray: result)
+                
+                completion(games)
+            case .failure(let error):
+                print("Error \(error.localizedDescription)")
+                
+            }
             
-            debugPrint(response.request!)
             
-            let result = (response.result.value as! [String : AnyObject])["top"] as! [[String : AnyObject]]
-        
-            let games = Mapper<Game>().mapArray(JSONArray: result)
-
-            completion(games)
         }
     }
 }
