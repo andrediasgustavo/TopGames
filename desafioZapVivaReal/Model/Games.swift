@@ -14,6 +14,7 @@ final class Game: Mappable {
     var visualizations: Int?
     var gameName: GameName?
     var gameImageList: GameImageList?
+    var isFavorite = false
     
     required init?(map: Map) {
     }

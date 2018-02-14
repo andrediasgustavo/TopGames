@@ -55,13 +55,6 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-Iu-KUe">
                                                     <rect key="frame" x="14" y="20" width="159" height="184"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notFavorite" translatesAutoresizingMaskIntoConstraints="NO" id="D3O-j9-zC6">
-                                                    <rect key="frame" x="152" y="3" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="MwZ-XG-mvb"/>
-                                                        <constraint firstAttribute="height" constant="32" id="gkn-1I-SeU"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-jX-Hm1">
                                                     <rect key="frame" x="8" y="204" width="171" height="48"/>
                                                     <constraints>
@@ -71,14 +64,19 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-5h-LCj" userLabel="Favorite Game Button">
-                                                    <rect key="frame" x="137" y="0.0" width="50" height="50"/>
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-5h-LCj" userLabel="Favorite Game Button">
+                                                    <rect key="frame" x="151" y="0.0" width="32" height="32"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES" selected="YES"/>
+                                                    </accessibility>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="98a-rO-IXp"/>
-                                                        <constraint firstAttribute="width" constant="50" id="ssN-aU-ymD"/>
+                                                        <constraint firstAttribute="height" constant="32" id="98a-rO-IXp"/>
+                                                        <constraint firstAttribute="width" constant="32" id="ssN-aU-ymD"/>
                                                     </constraints>
+                                                    <state key="normal" image="notFavorite" backgroundImage="notFavorite"/>
+                                                    <state key="highlighted" backgroundImage="favoriteGame"/>
                                                     <connections>
-                                                        <action selector="favoriteGame:" destination="SMH-Lm-MW8" eventType="touchUpInside" id="Pum-lt-8Di"/>
+                                                        <action selector="favoriteGame:" destination="SMH-Lm-MW8" eventType="touchUpInside" id="xEw-A7-7Jz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -88,16 +86,14 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="3A0-jX-Hm1" secondAttribute="bottom" id="6Dl-QQ-K0o"/>
                                             <constraint firstAttribute="trailing" secondItem="YIM-Iu-KUe" secondAttribute="trailing" constant="14" id="6zw-fk-C6E"/>
                                             <constraint firstItem="YIM-Iu-KUe" firstAttribute="top" secondItem="SMH-Lm-MW8" secondAttribute="top" constant="20" id="92n-6i-uyj"/>
-                                            <constraint firstAttribute="trailing" secondItem="D3O-j9-zC6" secondAttribute="trailing" constant="3" id="Fac-Oz-FAH"/>
                                             <constraint firstItem="YIM-Iu-KUe" firstAttribute="leading" secondItem="SMH-Lm-MW8" secondAttribute="leading" constant="14" id="H55-Ml-IZ2"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="3A0-jX-Hm1" secondAttribute="trailing" id="JDs-IY-SBO"/>
                                             <constraint firstItem="3A0-jX-Hm1" firstAttribute="leading" secondItem="SMH-Lm-MW8" secondAttribute="leadingMargin" id="RaK-io-anX"/>
                                             <constraint firstItem="3A0-jX-Hm1" firstAttribute="top" secondItem="YIM-Iu-KUe" secondAttribute="bottom" id="cJf-A9-5ED"/>
-                                            <constraint firstAttribute="trailing" secondItem="vFu-5h-LCj" secondAttribute="trailing" id="clx-OJ-GbC"/>
-                                            <constraint firstItem="D3O-j9-zC6" firstAttribute="top" secondItem="SMH-Lm-MW8" secondAttribute="top" constant="3" id="rRA-Si-sWp"/>
+                                            <constraint firstAttribute="trailing" secondItem="vFu-5h-LCj" secondAttribute="trailing" constant="4" id="clx-OJ-GbC"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="favorited" destination="D3O-j9-zC6" id="XKr-zf-Aqa"/>
+                                            <outlet property="favoriteButton" destination="vFu-5h-LCj" id="FxL-In-8C0"/>
                                             <outlet property="gameImage" destination="YIM-Iu-KUe" id="MG9-cM-HUW"/>
                                             <outlet property="gameName" destination="3A0-jX-Hm1" id="xL8-Hi-g5e"/>
                                         </connections>
@@ -218,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="832.53373313343332"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="DKH-Rq-S1i">
             <objects>
-                <tabBarController id="qFf-sk-BdN" sceneMemberID="viewController">
+                <tabBarController id="qFf-sk-BdN" customClass="MainTabBarViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pc0-uN-Fct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -263,7 +259,7 @@
         <!--Favoritos-->
         <scene sceneID="sFA-TW-zLC">
             <objects>
-                <viewController storyboardIdentifier="FavoriteGamesViewController" id="1bW-Yc-ME6" customClass="FavoriteGameViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteGameViewController" id="1bW-Yc-ME6" customClass="FavoriteGameViewController" customModule="desafioZapVivaReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAb-dn-7Ci">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,9 +313,6 @@
                                                         <constraint firstAttribute="width" constant="50" id="KRo-uy-UCq"/>
                                                         <constraint firstAttribute="height" constant="50" id="uwn-A4-w3h"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <action selector="favoriteGame:" destination="lC0-f9-sqc" eventType="touchUpInside" id="H3a-dB-OXj"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -337,9 +330,9 @@
                                             <constraint firstItem="aJs-KJ-Ybh" firstAttribute="top" secondItem="lC0-f9-sqc" secondAttribute="top" constant="5" id="ovO-zp-bjD"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="favorited" destination="aJs-KJ-Ybh" id="YGx-8Q-4PE"/>
-                                            <outlet property="gameImage" destination="JQ7-Qh-9xP" id="aus-30-0zt"/>
-                                            <outlet property="gameName" destination="YoT-hu-kgm" id="Sjb-ZS-nby"/>
+                                            <outlet property="favorited" destination="aJs-KJ-Ybh" id="ZNn-2a-xFj"/>
+                                            <outlet property="gameImage" destination="JQ7-Qh-9xP" id="JQc-R4-wMv"/>
+                                            <outlet property="gameName" destination="YoT-hu-kgm" id="DG8-ae-LLr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

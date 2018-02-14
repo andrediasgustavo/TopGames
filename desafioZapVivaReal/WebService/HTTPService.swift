@@ -21,11 +21,11 @@ class HttpService: NSObject{
             "Accept": "application/vnd.twitchtv.v5+json"
         ]
         
-//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         Alamofire.request(url, method: .get, headers: headers).responseJSON { response in
             
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             debugPrint(response.request!)
             

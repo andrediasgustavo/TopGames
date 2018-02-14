@@ -9,12 +9,19 @@
 import UIKit
 import Kingfisher
 
+protocol FavoriteGame {
+    func favoriteGame(cell: TopGamesCollectionViewCell)
+}
+
 class TopGamesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var gameImage: UIImageView!
     @IBOutlet weak var gameName: UILabel!
-    @IBOutlet weak var favorited: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    var delegate: FavoriteGame?
+    var isFavorite = false
     
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -23,12 +30,18 @@ class TopGamesCollectionViewCell: UICollectionViewCell {
         let url = URL(string: (game.gameImageList?.boxImages?.bannerMedium)!)
         self.gameImage.kf.setImage(with: url)
         self.gameName.text = game.gameName?.name!
-        self.favorited.image = UIImage(named: "notFavorite")
+        
+        if game.isFavorite {
+            self.favoriteButton.setImage(UIImage(named: "favoriteGame"),  for: .normal)
+        } else {
+            self.favoriteButton.setImage(UIImage(named: "notFavorite"),  for: .normal)
+        }
+       
     }
     
+  
     @IBAction func favoriteGame(_ sender: Any) {
-        self.favorited.image = UIImage(named: "favoriteGame")
+        
+        self.delegate?.favoriteGame(cell: self)
     }
-
-    
 }

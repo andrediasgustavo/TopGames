@@ -12,56 +12,57 @@ class FavoriteGameViewController: UIViewController  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var refreshControl: UIRefreshControl?
-    var games: [Game]?
-    
+    var games = [Game]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     //MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(refreshGames), for: .valueChanged)
-        
-        self.collectionView.addSubview(refreshControl!)
         self.activityIndicator.startAnimating()
         self.collectionView.isHidden = true
-        self.games = [Game]()
-        self.getGames()
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(self.addGame(_:)), name: NSNotification.Name(rawValue: "addGameNotification"), object: nil)
+        
         self.collectionView.reloadData()
         self.collectionView.layoutIfNeeded()
         view.layoutIfNeeded()
     }
     
-    //MARK: Methods
-    
-    @objc func refreshGames() {
-        self.getGames()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.games.count == 0 {
+            self.activityIndicator.stopAnimating()
+            self.collectionView.isHidden = false
+        }
+        self.collectionView.reloadData()
     }
     
-    func getGames() {
-        
-//        APIRequest.shared.getGames(page: 1, completion: { (gamesResult) in
-//
-//            if !gamesResult.isEmpty {
-//                for game in gamesResult {
-//
-//                    self.games?.append(game)
-//                    self.collectionView.reloadData()
-//                }
-//                self.activityIndicator.stopAnimating()
-//                self.collectionView.isHidden = false
-//                self.refreshControl?.endRefreshing()
-//            } else {
-//                self.activityIndicator.stopAnimating()
-//                self.collectionView.isHidden = false
-//                self.refreshControl?.endRefreshing()
-//            }
-//        })
+    @objc func addGame(_ notification: NSNotification) {
+        if let games = notification.userInfo as NSDictionary? {
+            if let game = games["game"] as? Game{
+                if self.games.count == 0 {
+                    self.games.append(game)
+                } else {
+                    for i in self.games {
+                        if i.gameName?.name == game.gameName?.name {
+                           return
+                        }
+                    }
+                    self.games.append(game)
+                }
+            }
+        }
+        self.collectionView.reloadData()
+        self.activityIndicator.stopAnimating()
+        self.collectionView.isHidden = false
     }
 }
 
@@ -69,12 +70,12 @@ class FavoriteGameViewController: UIViewController  {
 extension FavoriteGameViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.games?.count ?? 0
+        return self.games.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopGamesCell", for: indexPath) as! TopGamesCollectionViewCell
-        cell.setup(game: self.games![indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteGamesCell", for: indexPath) as! FavoriteGamesCollectionViewCell
+        cell.setup(game: self.games[indexPath.row])
         return cell
         
     }

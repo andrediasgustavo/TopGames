@@ -14,10 +14,8 @@ class FavoriteGamesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var favorited: UIImageView!
     
-    
-    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
     func setup(game: Game) {
@@ -25,10 +23,6 @@ class FavoriteGamesCollectionViewCell: UICollectionViewCell {
         self.gameImage.kf.setImage(with: url)
         self.gameName.text = game.gameName?.name!
         self.favorited.image = UIImage(named: "favoriteGame")
-    }
-    
-    @IBAction func favoriteGame(_ sender: Any) {
-        self.favorited.image = UIImage(named: "notFavorite")
     }
     
 }

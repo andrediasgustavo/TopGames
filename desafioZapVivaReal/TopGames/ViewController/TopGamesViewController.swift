@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TopGamesViewController: UIViewController {
+class TopGamesViewController: UIViewController, FavoriteGame {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +19,8 @@ class TopGamesViewController: UIViewController {
     var games: [Game]?
     var filteredGames: [Game]?
     var useFilteredArray = false
-
+    var indexPathRow: Int?
+    var favoriteGamesViewController: FavoriteGameViewController?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,10 +41,17 @@ class TopGamesViewController: UIViewController {
         self.getGames()
         self.collectionView.reloadData()
         self.collectionView.layoutIfNeeded()
-        view.layoutIfNeeded()
+//        view.layoutIfNeeded()
     }
     
-    //MARK: Methods
+    //MARK: Methods        
+    
+    func favoriteGame(cell: TopGamesCollectionViewCell) {
+        let indexPath = self.collectionView.indexPath(for: cell)
+        self.indexPathRow = indexPath?.row
+        self.collectionView.reloadData()
+    }
+    
     
     @objc func refreshGames() {
         self.getGames()
@@ -164,7 +172,16 @@ extension TopGamesViewController:  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellGames = self.useFilteredArray ? self.filteredGames : self.games
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopGamesCell", for: indexPath) as! TopGamesCollectionViewCell
+        cell.delegate = self
         cell.setup(game: cellGames![indexPath.row])
+        
+        if self.indexPathRow != nil && indexPath.row == self.indexPathRow! {
+            cell.favoriteButton.setImage(UIImage(named: "favoriteGame"),  for: .normal)
+            cellGames![indexPath.row].isFavorite = true
+            let gameHash:[String: Game] = ["game": cellGames![indexPath.row]]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addGameNotification"), object: nil, userInfo: gameHash)
+        }
+    
         return cell
     }
     
@@ -174,7 +191,6 @@ extension TopGamesViewController:  UICollectionViewDataSource {
         GameDetailViewController
         let cellGames = self.useFilteredArray ? self.filteredGames : self.games
         gameDetail.setupVC(game: cellGames![indexPath.row])
-//        self.performSegue(withIdentifier: "DetailViewControllerSegue", sender: self)
         self.navigationController?.show(gameDetail, sender: self)
     }
 }
