@@ -67,22 +67,28 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     
     func getGames(limit: Int, pages: Int) {
         
-        APIRequest.shared.getGames(limit: limit, pages: pages, completion: { (gamesResult) in
-          
-            if !gamesResult.isEmpty {
-                for game in gamesResult {
-                    self.games?.append(game)
-                    self.collectionView.reloadData()
+       DispatchQueue.global(qos: .userInitiated).async {
+        
+            APIRequest.shared.getGames(limit: limit, pages: pages, completion: { (gamesResult) in
+                
+                 DispatchQueue.main.async {
+              
+                    if !gamesResult.isEmpty {
+                        for game in gamesResult {
+                            self.games?.append(game)
+                            self.collectionView.reloadData()
+                        }
+                        self.activityIndicator.stopAnimating()
+                        self.collectionView.isHidden = false
+                        self.refreshControl?.endRefreshing()
+                    } else {
+                        self.activityIndicator.stopAnimating()
+                        self.collectionView.isHidden = false
+                        self.refreshControl?.endRefreshing()
+                    }
                 }
-                self.activityIndicator.stopAnimating()
-                self.collectionView.isHidden = false
-                self.refreshControl?.endRefreshing()
-            } else {
-                self.activityIndicator.stopAnimating()
-                self.collectionView.isHidden = false
-                self.refreshControl?.endRefreshing()
-            }
-        })
+            })
+        }
     }
 }
 
@@ -143,6 +149,8 @@ extension TopGamesViewController:  UICollectionViewDataSource {
         if self.useFilteredArray == false {
             if indexPath.row == (self.games?.count)! - 1 {
                 self.page! = self.page! + 20
+                self.activityIndicator.startAnimating()
+                self.collectionView.isHidden = true
                 self.getGames(limit: self.limit! , pages: self.page!)
                 self.collectionView.reloadData()
             }

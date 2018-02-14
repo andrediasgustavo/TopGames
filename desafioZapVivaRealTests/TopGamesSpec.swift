@@ -10,7 +10,7 @@ import Foundation
 import Quick
 import Nimble
 
-@testable import desafioZapVivaRealTests
+@testable import desafioZapVivaReal
 
 class TopGamesTests: QuickSpec {
 
@@ -24,7 +24,7 @@ class TopGamesTests: QuickSpec {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc: TopGamesViewController = storyboard.instantiateViewController(withIdentifier: "TopGamesViewController") as! TopGamesViewController
                 topGamesVC = vc
-                _ = topGamesVC.view // To call viewDidLoad
+                _ = topGamesVC.view
             }
             
             it("Should start with a hidden collection view") {
