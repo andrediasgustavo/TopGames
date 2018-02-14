@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		042624912033D3BB00FB9CCE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042624902033D3BB00FB9CCE /* MainTabBarViewController.swift */; };
+		042624942033E9B500FB9CCE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042624932033E9B500FB9CCE /* CoreDataManager.swift */; };
 		044583B8202F6B99001ED081 /* TopGamesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044583B7202F6B99001ED081 /* TopGamesSpec.swift */; };
 		04CC86CC20290C4B00CC3699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC86CB20290C4B00CC3699 /* AppDelegate.swift */; };
 		04CC86D120290C4B00CC3699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC86CF20290C4B00CC3699 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		042624902033D3BB00FB9CCE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		042624932033E9B500FB9CCE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		044583B7202F6B99001ED081 /* TopGamesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesSpec.swift; sourceTree = "<group>"; };
 		04CC86C820290C4B00CC3699 /* desafioZapVivaReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioZapVivaReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC86CB20290C4B00CC3699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042624922033E99100FB9CCE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				042624932033E9B500FB9CCE /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		04CC86BF20290C4B00CC3699 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		04CC86CA20290C4B00CC3699 /* desafioZapVivaReal */ = {
 			isa = PBXGroup;
 			children = (
+				042624922033E99100FB9CCE /* Manager */,
 				04CC86EE202A790300CC3699 /* TopGames */,
 				04CC86F0202A793F00CC3699 /* GamesDetail */,
 				04CC86EF202A792100CC3699 /* FavoriteGames */,
@@ -522,6 +533,7 @@
 				04D91B672031CBDF0076A37B /* GameImages.swift in Sources */,
 				04D91B632031C7200076A37B /* GameImageList.swift in Sources */,
 				04D635B4202F83C0008CD103 /* HTTPService.swift in Sources */,
+				042624942033E9B500FB9CCE /* CoreDataManager.swift in Sources */,
 				04D635B6202F8449008CD103 /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8K39A2UQ6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -705,7 +717,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8K39A2UQ6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/desafioZapVivaReal/App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gmail.andrediasgustavo.desafioZapVivaReal;
 				PRODUCT_NAME = "$(TARGET_NAME)";

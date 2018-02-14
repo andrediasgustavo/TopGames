@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoriteGameViewController: UIViewController  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var games = [Game]()
+    var gamesDataBase = [NSManagedObject]()
+    var coreDataManager = CoreDataManager()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -45,17 +48,26 @@ class FavoriteGameViewController: UIViewController  {
         self.collectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.gamesDataBase = self.coreDataManager.fetchDataBase()
+}
+    
+    //MARK: Methods
+    
     @objc func addGame(_ notification: NSNotification) {
         if let games = notification.userInfo as NSDictionary? {
             if let game = games["game"] as? Game{
                 if self.games.count == 0 {
                     self.games.append(game)
+                    self.coreDataManager.saveInDataBase(game: game)
                 } else {
                     for i in self.games {
                         if i.gameName?.name == game.gameName?.name {
                            return
                         }
                     }
+                    self.coreDataManager.saveInDataBase(game: game)
                     self.games.append(game)
                 }
             }
@@ -66,16 +78,18 @@ class FavoriteGameViewController: UIViewController  {
     }
 }
 
+
 //MARK: DataSource
 extension FavoriteGameViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.games.count
+        return self.gamesDataBase.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteGamesCell", for: indexPath) as! FavoriteGamesCollectionViewCell
-        cell.setup(game: self.games[indexPath.row])
+        cell.setup(game: self.gamesDataBase[indexPath.row])
         return cell
         
     }

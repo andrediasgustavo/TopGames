@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoriteGamesCollectionViewCell: UICollectionViewCell {
     
@@ -18,10 +19,10 @@ class FavoriteGamesCollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
-    func setup(game: Game) {
-        let url = URL(string: (game.gameImageList?.boxImages?.bannerMedium)!)
+    func setup(game: NSManagedObject) {
+        let url = URL(string: (game.value(forKeyPath: "gameImage") as? String)!)
         self.gameImage.kf.setImage(with: url)
-        self.gameName.text = game.gameName?.name!
+        self.gameName.text = game.value(forKeyPath: "gameName") as? String
         self.favorited.image = UIImage(named: "favoriteGame")
     }
     
