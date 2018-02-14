@@ -27,8 +27,8 @@ class TopGamesTests: QuickSpec {
                 _ = topGamesVC.view // To call viewDidLoad
             }
             
-            it("Should ") {
-                
+            it("Should start with a hidden collection view") {
+                expect(self.vc.collectionView.isHidden) == true
             }
         
         }

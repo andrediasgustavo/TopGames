@@ -18,8 +18,8 @@ class BaseAPI: NSObject {
         return url
     }
     
-    func getGamesWithPagination(_ page: Int) -> String {
-        return self.getURL("/?offset=\(page)")
+    func getGamesWithPagination(_ limit: Int, pages: Int) -> String {
+        return self.getURL("/?limit=\(limit)&offset=\(pages)")
     }
 
 }

@@ -20,6 +20,8 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     var filteredGames: [Game]?
     var useFilteredArray = false
     var indexPathRow: Int?
+    var page: Int?
+    var limit: Int?
     var favoriteGamesViewController: FavoriteGameViewController?
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,10 +40,16 @@ class TopGamesViewController: UIViewController, FavoriteGame {
         self.activityIndicator.startAnimating()
         self.collectionView.isHidden = true
         self.games = [Game]()
-        self.getGames()
+        self.page = 0
+        self.limit = 20
+        self.getGames(limit: 20, pages: self.page!)
         self.collectionView.reloadData()
         self.collectionView.layoutIfNeeded()
-//        view.layoutIfNeeded()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     //MARK: Methods        
@@ -54,16 +62,15 @@ class TopGamesViewController: UIViewController, FavoriteGame {
     
     
     @objc func refreshGames() {
-        self.getGames()
+        self.getGames(limit: self.limit!, pages: self.page!)
     }
     
-    func getGames() {
+    func getGames(limit: Int, pages: Int) {
         
-        APIRequest.shared.getGames(page: 1, completion: { (gamesResult) in
+        APIRequest.shared.getGames(limit: limit, pages: pages, completion: { (gamesResult) in
           
             if !gamesResult.isEmpty {
                 for game in gamesResult {
-                   
                     self.games?.append(game)
                     self.collectionView.reloadData()
                 }
@@ -77,12 +84,6 @@ class TopGamesViewController: UIViewController, FavoriteGame {
             }
         })
     }
-    
-    //MARK: Core Data
-    
-   
-    
-   
 }
 
 
@@ -138,7 +139,15 @@ extension TopGamesViewController:  UICollectionViewDataSource {
             let gameHash:[String: Game] = ["game": cellGames![indexPath.row]]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addGameNotification"), object: nil, userInfo: gameHash)
         }
-    
+        
+        if self.useFilteredArray == false {
+            if indexPath.row == (self.games?.count)! - 1 {
+                self.page! = self.page! + 20
+                self.getGames(limit: self.limit! , pages: self.page!)
+                self.collectionView.reloadData()
+            }
+        }
+        
         return cell
     }
     

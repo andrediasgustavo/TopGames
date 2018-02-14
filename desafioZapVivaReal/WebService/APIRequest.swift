@@ -17,9 +17,9 @@ class APIRequest: HttpService {
     let baseAPI = BaseAPI()
     
     // MARK: - Methods Services
-    func getGames(page:Int, completion: (([Game]) -> Void)!) {
+    func getGames(limit:Int, pages: Int, completion: (([Game]) -> Void)!) {
         
-        self.doGet(url: (baseAPI.getGamesWithPagination(page))) { (data) in
+        self.doGet(url: (baseAPI.getGamesWithPagination(limit, pages: pages))) { (data) in
             completion(data)
         }
     }

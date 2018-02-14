@@ -36,7 +36,6 @@ class FavoriteGameViewController: UIViewController  {
         
         self.collectionView.reloadData()
         self.collectionView.layoutIfNeeded()
-        view.layoutIfNeeded()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -100,7 +99,7 @@ extension FavoriteGameViewController: UICollectionViewDataSource {
 extension FavoriteGameViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:(collectionView.frame.width/2), height: 220)
+        return CGSize(width:(collectionView.frame.width/2), height: 260)
         
     }
 }
